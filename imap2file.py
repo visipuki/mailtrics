@@ -3,10 +3,12 @@
 import imaplib
 import email
 import attachments2file
+import getpass
 
 M = imaplib.IMAP4_SSL("gmail-imap.l.google.com")
+pw = getpass.getpass('Enter pass for lexa> ')
 criterion = '(ON "04-May-2014")'
-M.login('lexa.konoplev', '(IJN9ijn!')
+M.login('lexa.konoplev', pw)
 M.select()
 typ, data = M.search(None, criterion)
 print(typ, data)
