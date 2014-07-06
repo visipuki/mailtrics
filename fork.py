@@ -19,5 +19,5 @@ class fork(PureProxy):
         attachments2file(mail, save_to)
 
 
-s = fork(('127.0.0.1', 1025), ('127.0.0.1', 25))
+s = fork(('127.0.0.1', 1025), ('192.168.1.21', 25))
 asyncore.loop()
